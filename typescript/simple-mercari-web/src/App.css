@@ -1,210 +1,127 @@
 * {
-  --theme-color-background-default: #ffffff;
-  --theme-color-background-highlight: #f5f5f5;
-  --theme-color-background-text: rgb(0, 0, 0, 0.5);
+	--theme-color-background-default: #ffffff;
+	--theme-color-background-highlight: #f5f5f5;
+	--theme-color-background-text: rgb(0, 0, 0, 0.5);
 
-  --theme-color-text-default: #333;
-  --theme-color-text-highlight: #999;
-  --theme-color-text-active: #222;
+	--theme-color-text-default: #333;
+	--theme-color-text-highlight: #999;
+	--theme-color-text-active: #222;
 
-  --theme-color-accent-default: #0095ee;
-  --theme-color-accent-highlight: #63c5ff;
-  --theme-color-accent-active: #0073cc;
+	--theme-color-accent-default: #0095ee;
+	--theme-color-accent-highlight: #63c5ff;
+	--theme-color-accent-active: #0073cc;
 
-  --theme-color-attention-default: #ff333f;
-  --theme-color-attention-highlight: #ff6574;
-  --theme-color-attention-active: #e32b36;
+	--theme-color-attention-default: #ff333f;
+	--theme-color-attention-highlight: #ff6574;
+	--theme-color-attention-active: #e32b36;
 
-  --theme-color-success-default: #0aa466;
-  --theme-color-success-highlight: #0fbf67;
-  --theme-color-success-active: #078962;
+	--theme-color-success-default: #0aa466;
+	--theme-color-success-highlight: #0fbf67;
+	--theme-color-success-active: #078962;
 
-  --theme-color-focus-ring: #89bffd66;
+	--theme-color-focus-ring: #89bffd66;
 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 
-  font-family: Verdana, sans-serif;
+	font-family: Verdana, sans-serif;
 }
 
-
 body {
-  color: var(--theme-color-text-default);
-  background-color: var(--theme-color-background-default);
+	color: var(--theme-color-text-default);
+	background-color: var(--theme-color-background-default);
 }
 
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .Title {
-  min-height: 8vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(15px + 3vmin);
-  letter-spacing: 0.1rem;
-  color: var(--theme-color-attention-default);
-  padding: calc(1vh + 1vw) 5vw calc(0.5vh + 0.5vw);
-}
-
-.Listing {
-  min-height: 8vh;
-  font-size: calc(10px + 1vmin);
-  padding: calc(1vh + 1vw) 5vw;
-  box-shadow: 0 3px 3px var(--theme-color-background-highlight);
-}
-
-.Listing form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4vw;
-  width: 100%;
-}
-
-.Listing .InputBox {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2vw;
-  width: 100%;
-  height: 100%;
-}
-
-input, input:focus, button {
-  -webkit-appearance: none;
-  appearance: none;
-  border-style: none;
-  outline-style: none;
-
-  box-shadow: 3px 3px 3px var(--theme-color-background-highlight);
-}
-
-input {
-  background-color: var(--theme-color-background-highlight);
-  border-radius: calc(0.5vh + 0.5vw);
-  padding: calc(0.4vh + 0.2vw) calc(0.8vh + 0.8vw);
-}
-
-input[type=text] {
-  color: var(--theme-color-text-default);
-}
-
-input[type=text]:hover {
-  outline: 2px solid var(--theme-color-focus-ring);
-}
-
-input[type=text]:focus:invalid {
-  outline: 2px solid var(--theme-color-attention-highlight);
-}
-
-input[type=file] {
-  cursor: pointer;
-  color: var(--theme-color-text-highlight);
-}
-
-input[type=file]:hover {
-  color: var(--theme-color-text-default);
-  outline: 2px solid var(--theme-color-focus-ring);
-}
-
-input[type=file]:focus:invalid {
-  outline: 2px solid var(--theme-color-attention-highlight);
-}
-
-button {
-  min-width: max-content;
-  cursor: pointer;
-  background-color: var(--theme-color-accent-default);
-  color: var(--theme-color-background-default);
-  font-weight: bold;
-  padding: calc(0.5vh + 1vw) calc(0.5vh + 2vw);
-  border-radius: calc(0.5vh + 1.5vw);
-}
-
-button:hover {
-  background-color: var(--theme-color-accent-highlight);
-}
-
-button:active {
-  background-color: var(--theme-color-accent-active);
+	min-height: 8vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(15px + 3vmin);
+	letter-spacing: 0.1rem;
+	color: var(--theme-color-attention-default);
+	padding: calc(1vh + 1vw) 5vw calc(0.5vh + 0.5vw);
 }
 
 .ItemListGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 2vw;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 2vw;
 
-  padding: calc(2vh + 1.5vw) 5vw;
+	padding: calc(2vh + 1.5vw) 5vw;
 }
 
 .ItemList {
-  min-height: 8vh;
-  display: flex;
-  flex-direction: column;
-  gap: calc(1vh + 0.5vw);
-  align-items: center;
-  justify-content: center;
-  font-size: calc(6px + 1vmin);
-  color: var(--theme-color-text-default);
-  background-color: var(--theme-color-background-highlight);
-  padding: 0 0 calc(0.5vh + 0.5vw);
-  border-radius: 1vw;
-  overflow: hidden;
+	min-height: 8vh;
+	display: flex;
+	flex-direction: column;
+	gap: calc(1vh + 0.5vw);
+	align-items: center;
+	justify-content: center;
+	font-size: calc(6px + 1vmin);
+	color: var(--theme-color-text-default);
+	background-color: var(--theme-color-background-highlight);
+	padding: 0 0 calc(0.5vh + 0.5vw);
+	border-radius: 1vw;
+	overflow: hidden;
 }
 
 .ItemList:hover {
-  outline: 0.5vw solid var(--theme-color-focus-ring);
+	outline: 0.5vw solid var(--theme-color-focus-ring);
 }
 
 .ItemList .ItemImage {
-  width: 100%;
-  height: clamp(140px, 20vh, 300px);
-  background-size: cover;
-  background-position: center;
+	width: 100%;
+	height: clamp(140px, 20vh, 300px);
+	background-size: cover;
+	background-position: center;
 }
 
 .ItemList .ItemDescriptions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: calc(1vh + 0.5vw);
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: calc(1vh + 0.5vw);
+	width: 100%;
 }
 
 .ItemList .ItemDescriptions .ItemName {
-  padding: 0 2vw;
-  text-align: center;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
+	padding: 0 2vw;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
 
 .ItemList .ItemDescriptions .ItemCategory {
-  color: var(--theme-color-background-default);
-  background-color: var(--theme-color-background-text);
-  border-radius: calc(1vh + 1vw) 0 0 calc(1vh + 1vw);
-  padding: calc(0.3vh + 0.3vw) 1vw;
-  padding-left: calc(1vh + 1vw); 
-  align-self: flex-end;
-  overflow-wrap: break-word;
-  max-width: 80%;
-  font-size: 0.9em;
+	color: var(--theme-color-background-default);
+	background-color: var(--theme-color-background-text);
+	border-radius: calc(1vh + 1vw) 0 0 calc(1vh + 1vw);
+	padding: calc(0.3vh + 0.3vw) 1vw;
+	padding-left: calc(1vh + 1vw);
+	align-self: flex-end;
+	overflow-wrap: break-word;
+	max-width: 80%;
+	font-size: 0.9em;
 }
 
 .App-link {
-  color: var(--theme-color-accent-default);
+	color: var(--theme-color-accent-default);
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
